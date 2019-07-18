@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+    <title>Disney characters</title>
+    <meta charset="utf-8"/>
+    
+    <!-- define a viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- inserindo css do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" />
+	
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+
+	<!-- CSS personalizado-->
+	<link rel="stylesheet" href="css/estilos.css" media="all"/>
+
+	<!-- JQuery da galeria -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$(".thumbnail").click(function () {
+				var address = $(this).attr("src");
+				$("#popup").fadeIn("slow");
+				$("#lightbox").attr("src", address);
+			});
+			$("#close").click(function () {
+				$("#popup").fadeOut("fast");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		#popup {
+			background: #000000;
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		#center {
+			border: 10px solid #121212;
+			margin: 6% auto;
+			width: 750px;
+		}
+
+		#close {
+			float: right;
+			position: absolute;
+			top: 12%;
+		}
+			​
+	</style>
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+		  <!-- Cabeçalho do menu -->
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Disney characters</a>
+		  </div>
+	  
+		  <!-- itens do menu -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li><a href="#sobre">Sobre</a></li>
+	  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categoria<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#mickeymouse">Mickey Mouse</a></li>
+	  <li><a href="#minniemouse">Minnie Mouse</a></li>
+	  <li><a href="#patodonald">Pato Donald</a></li>
+	  <li><a href="#pateta">Pateta</a></li>
+	  <li><a href="#pluto">Pluto</a></li>
+				</ul>
+			  </li>
+	  
+	  <li><a href="#galeria">Galeria</a></li>
+			</ul>
+	  
+		  </div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	  </nav>
+
+	  ​<!-- Slider da aplicação -->
+	 <div class="row">
+	  <div class="divslider" style="background-color: white;">
+			<div class="container-slider">
+				<div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-2">
+					<div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="5000" style="width:100%;">
+						
+						<ol class="carousel-indicators">
+							<li class="active" data-target="#sliderprincipal" data-slide-to="0"></li>
+							<li data-target="#sliderprincipal" data-slide-to="1"></li>
+							<li data-target="#sliderprincipal" data-slide-to="2"></li>
+						</ol>
+	
+						<div class="carousel-inner" role="listbox">
+	
+							<div class="item active">
+								<img src="imagens/disneylogo.jpg" alt="Imagem slider 01" style="width: 100%;" />
+							</div>
+	
+							<div class="item">
+								<img src="imagens/todos.jpg" alt="Imagem slider 02" style="width: 100%;" />
+							</div>
+	
+							<div class="item">
+								<img src="imagens/animacao.gif" alt="Imagem slider 03" style="width: 100%;" />
+							</div>
+						
+						<!-- Controles -->
+	
+							  <a class="left carousel-control" href="#sliderprincipal" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Anterior</span>
+							  </a>
+	
+							  <a class="right carousel-control" href="#sliderprincipal" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Próximo</span>
+							  </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 	
+	<!-- Fim do slider da aplicação -->
+
+
+<!-- Área de conteúdo do site-->
+<section id="sobre">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="page-header">
+					<h2>Sobre</h2>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					Desde pequena sou apaixonada pela pelo mundo da Disney! Apesar de ainda não ter tido a oportunidade de viajar para conhecer os parques, cada filme que assisto é como se eu estivesse lá, vivendo esse sonho que a grande parte das pessoas tem. A cada filme é uma imersão diferente no que está sendo contado; é uma pequena experiência que me enche cada vez mais. Diante de toda essa paixão e de um trabalho para o curso que faço no momento, quis fazer essa página contando um pouquinho sobre cada personagem que compõe este mundo tão fascinante e que deixa qualquer um apaixonado! 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="mickeymouse">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Mickey Mouse</h2>
+					</div>
+	
+					<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<img class="img-responsive" src="imagens/mickeymouse.jpg"/>
+					</figure>
+	
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<strong>Mickey Mouse</strong> foi criado em 18 de novembro de 1928, no curta animado mudo Plane Crazy. Inicialmente batizado de Mortimer, o personagem teve seu nome alterado para Mickey Mouse por sugestão de Lillian Bounds, esposa de Walt Disney, que considerava o primeiro nome formal demais para o personagem. Inicialmente, Mickey bebia e fumava, mas a popularidade que ganhou em pouco tempo foi tão grande que Walt Disney resolveu torná-lo politicamente correto já em 1930. Na banda desenhada (no Brasil, histórias em quadrinhos) atual, os seus melhores amigos são Pluto e Pateta e a sua namorada é Minnie. Mickey surge em calções vermelhos e sapatos amarelos, uma homenagem que seu criador, Walt Disney, fez à Ordem DeMolay, da qual era membro. Em outras linhas de histórias, são abordados variadíssimos temas; numa delas, Mickey é um detetive, e veste casaco e todo o traje costumeiro. Um dos temas mais conhecidos é o duelo constante com o inimigo Bafo de Onça e, noutro tema, também enfrenta o Mancha Negra.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="minniemouse">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h2>Minnie Mouse</h2>
+						</div>
+		
+						<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<img class="img-responsive" src="imagens/minniemouse.jpg"/>
+						</figure>
+		
+						<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<strong>Minerva "Minnie" Mouse</strong> é uma personagem do mundo fictício de Disney. Pertence ao Universo de Mickey, seu namorado. Criada em 1928 por Walt Disney. Esteve com Mickey desde o começo. E ela faz tudo pelo seu namorado Mickey. No primeiro desenho animado do camundongo famoso, Steamboat Willie (1928), depois de Bafo de Onça (Pete, no original em inglês) discute com Mickey na ponte sobre o barco fluvial de que era empregado, avista-se Minnie no cais, quase perdendo o barco pelo qual esperava. Mickey consegue "pescar" Minnie com um gancho e trazê-la para bordo. Depois, no deque, eles saltitam com a carga de animais de granja, usando-os como instrumentos musicais e com os quais improvisam a canção "Turkey in the Straw". Minnie é também amiga de Clarabela e Margarida.Sua primeira história em quadrinho foi "Lost on a Desert Island", publicada em Janeiro de 1930, nos EUA. No Brasil esta história foi publicada na revista "Cinqüentenário Disney 1", de 1973, com o título "Mickey Contra os Canibais".
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<section id="patodonald">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h2>Pato Donald</h2>
+						</div>
+			
+						<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<img class="img-responsive" src="imagens/patodonald.jpg"/>
+						</figure>
+			
+						<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<strong>O Pato Donald</strong> (em inglês: 'Donald Duck' ) é um personagem de desenhos animados e histórias em quadrinhos dos estúdios de Walt Disney, criado em 1934. Ele aparece em vários desenhos como antagonista antipático, principalmente naqueles em que aparece junto de Mickey Mouse ou de seus sobrinhos Huguinho, Zezinho e Luisinho. Ele é muito azarado e mal-humorado, sempre perdendo suas batalhas para Mickey e para seus sobrinhos, dando um motivo verdadeiro para Donald odiá-los. Angariando grande popularidade graças a comicidade dos desenhos animados, os Estúdios Disney foram obrigados a mudar de estilo com a entrada dos Estados Unidos na II Guerra Mundial em 1942. A produção de desenhos passou a integrar o esforço de guerra norte-americano, abordando a guerra como tema. Em 1942, foi feito um desenho de propaganda anti-nazista, chamado de "A Face do Führer". Esse desenho mostra Donald vivendo na Alemanha Nazista, onde ele é forçado a trabalhar em uma fábrica de produção em série de armamento bélico pesado e de fotografias produzidas em série do Führer Adolf Hitler.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<section id="pateta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h2>Pateta</h2>
+						</div>
+				
+							<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<img class="img-responsive" src="imagens/pateta.jpg"/>
+							</figure>
+				
+							<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+							<strong>Pateta</strong> (em inglês, Goofy; originalmente Dippy Dawg) é um personagem de animação dos Estúdios Walt Disney criado em 1932. Ele é um cão antropomórfico de aparência magra, esguia, alta, e desengonçada. É conhecido pelo público por seu jeito atrapalhado, engraçado e bondoso e por seu chapéu singular. Seu nome seria um apelido, pois nos curtas dos anos 50 e 60 era chamado "George Geef" ou "G. G. Goof". Fontes atuais como o desenho A Turma do Pateta dão seu nome completo como Goofy Goof (em português, "Pateta Brincalhão"). Pateta possui um filho, Max, e os alter-egos super-heroicos Superpateta (paródia de Superman) e Jaime Scond (paródia de James Bond). É amigo próximo de Mickey Mouse e do Pato Donald, dois dos personagens mais característicos do universo Disney. A estreia do personagem foi em desenhos animados: começou em "Mickey's Revue" como Dippy Dawg; passou a ser retratado como um personagem mais novo em produções posteriores como no curta "The Whoopee Party". Ganhou produções dedicadas a partir de 1939. Dois curtas foram indicados ao Oscar: How to Play Football (1944) e Aquamania (1961).
+							</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="pluto">
+			<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="page-header">
+								<h2>Pluto</h2>
+							</div>
+					
+							<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<img class="img-responsive" src="imagens/pluto.jpg"/>
+							</figure>
+					
+							<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+							<strong>Pluto</strong> inicialmente, não era o mascote de Mickey, mas sim de sua namorada, Minnie. O cão, treinado para caça, era chamado inicialmente de Rover, mas a esposa de Walt Disney (este o criador da personagem) sugeriu uma mudança de nome, aproveitando a recém descoberta de Plutão. A personagem apareceu em mais de 50 episódios de desenhos da Disney, desde sua primeira aparição, em 1930, no cartoon "The Chain Gang". Pluto cativou adultos e crianças com sua personalidade quase humana, e mesmo que sua aparência tenha mudado desde os primeiros episódios, ele sempre salvou seu dono de perigos. Assim como acontece com outros personagens longevos, a origem de Pluto gera controvérsias. Alguns especialistas apontam 1930 como seu ano de criação, enquanto outros adotam 1931. 
+							</div>
+						</div>
+					</div>
+				</div>
+	</section>
+
+
+<!-- Início da galeria -->
+<section id="galeria">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="page-header">
+					<h2>Galeria</h2>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<img src="imagens/todos1.jpg" class="thumbnail" width="120" style="float:left;" />
+			<img src="imagens/todos2.jpg" class="thumbnail" width="120" style="float:left;" />
+			<img src="imagens/todos3.png" class="thumbnail" width="120" style="float:left;" />
+			<img src="imagens/todos4.jpg" class="thumbnail" width="120" style="float:left;" />
+			<img src="imagens/todos5.gif" class="thumbnail" width="120" style="float:left;" />
+			<img src="imagens/todos6.gif" class="thumbnail" width="120" style="float:left;" />
+		</div>
+	</div>
+</section>
+
+<div id="popup">
+	<div id="center">
+		<img id="lightbox" src="imagens/01.jpg" />
+		<img id="close" src="imagens/close.png" alt="close" />
+	</div> <!-- #center -->
+</div> <!-- #popup -->
+<!-- Fim da galeria -->	
+
+
+<!-- Fim da área de conteúdo-->
+
+
+
+
+	<!-- script JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- inserindo JavaScript do Bootstrap -->
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
+</body>
+</html>
